@@ -46,7 +46,7 @@ Look for patterns like:
 ```
 Thinking blocks (💭) indicate Claude is reviewing/deciding. These sequences need human judgment and should NOT be automated.
 
-Find 5+ patterns. First AskUserQuestion option: confirm/change save location.
+Find patterns (flexible count, default 3). First AskUserQuestion option: confirm/change save location.
 
 ## Category 2: Scripts
 
@@ -72,11 +72,10 @@ Look for patterns like:
   → Script: `slack-test.sh MESSAGE [WAIT] [THREAD_URL]`
 
 **REQUIRED FOR EACH SCRIPT:**
-1. **Show full script implementation** - Include complete, production-ready code with:
-   - Proper shebang line (e.g., `#!/usr/bin/env node` or `#!/bin/bash`)
-   - Error handling
-   - Usage examples
-   - All parameters and options documented
+1. **Show --help output** - Include the script's help text showing:
+   - Usage syntax
+   - All parameters and options
+   - Example usage
 
 2. **Explain reasoning** - For each script, clearly explain:
    - Why this script is useful (what problem it solves)
@@ -96,10 +95,22 @@ This script consolidates the repetitive 3-step workflow of filtering Docker cont
 - After: 1 script call × ~120 tokens = ~120 tokens per use
 - Savings: ~450 tokens per use × 40 occurrences = ~18,000 tokens total
 
-**Usage:**
-```javascript
-#!/usr/bin/env node
-// ... full script implementation ...
+**Usage (--help output):**
+```
+Usage: gateway-logs.js [OPTIONS] [PATTERN]
+
+Options:
+  --tail <N>      Number of log lines to show (default: 50)
+  --follow        Follow log output
+  --help          Show this help message
+
+Arguments:
+  PATTERN         Optional grep pattern to filter logs
+
+Examples:
+  gateway-logs.js --tail 100
+  gateway-logs.js "error"
+  gateway-logs.js --follow "warning"
 ```
 
 **When to use:**
@@ -108,7 +119,7 @@ This script consolidates the repetitive 3-step workflow of filtering Docker cont
 - Tracing specific error patterns across gateway logs
 ```
 
-Find 5+ patterns. First AskUserQuestion option: confirm/change scripts directory.
+Find patterns (flexible count based on what's in the report). First AskUserQuestion option: confirm/change scripts directory.
 
 ## Category 3: File Refactorings
 
@@ -172,11 +183,11 @@ These three files are consistently read together in sequence (found in 23 sessio
 - Recommendation: Only merge if files are consistently accessed together (>80% of the time)
 ```
 
-Find 5+ patterns. Show files, frequency, and total savings with full explanations.
+Find patterns. Show files, frequency, and total savings with full explanations.
 
 ## Rules
 
-- Minimum 5 suggestions per category
+- Generate suggestions based on patterns found in report (flexible count, quality over quantity)
 - Calculate impact: occurrences × tokens_per_use
 - Example: "Pattern found 23 times × ~190 tokens = ~4,370 tokens total savings"
 - Use multiSelect: true for all AskUserQuestion calls
