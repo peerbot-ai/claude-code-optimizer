@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 (2025-11-04)
+
+### Bug Fixes
+
+* Fix bin script paths to use relative ./ prefix
+
 ## 1.0.0 (2025-11-04)
 
 ### Features

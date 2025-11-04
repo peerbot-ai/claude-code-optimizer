@@ -1,6 +1,6 @@
 {
   "name": "agent-trace-ops",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Analyzes Claude Code conversation history to identify token optimization opportunities and generate helper scripts",
   "keywords": [
     "claude",
@@ -39,7 +39,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/peerbot-ai/agent-trace-ops.git"
+    "url": "git+https://github.com/peerbot-ai/agent-trace-ops.git"
   },
   "bugs": {
     "url": "https://github.com/peerbot-ai/agent-trace-ops/issues"

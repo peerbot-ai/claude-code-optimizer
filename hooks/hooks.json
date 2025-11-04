@@ -1,9 +1,0 @@
-{
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": []
-      }
-    ]
-  }
-}
