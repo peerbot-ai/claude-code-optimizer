@@ -84,7 +84,6 @@ Claude inspects the behavioral data from it's own agent and suggests different o
 
 # Suggested: Add to Makefile or package.json
 make deploy-gateway  # Reduces 4 calls → 1 call
-# Saves: ~190 tokens per use × 23 times = ~4,370 tokens total
 ```
 
 **Parameterized Scripts** - Reusable workflows with different parameters:
@@ -96,7 +95,6 @@ make deploy-gateway  # Reduces 4 calls → 1 call
 
 # Suggested script: ./scripts/worker-logs.sh
 ./scripts/worker-logs.sh 1762140643 50 "error"  # Reduces 3 calls → 1 call
-# Saves: ~150 tokens per use × 15 times = ~2,250 tokens total
 ```
 
 **File Refactorings** - Merge co-accessed files:
@@ -108,7 +106,6 @@ make deploy-gateway  # Reduces 4 calls → 1 call
 
 # Suggested: Merge into src/core.ts (1171 lines)
 1. Read: [+0s 13572b] src/core.ts[L1-L1171]  # Reduces 3 reads → 1 read
-# Saves: ~380 tokens per cycle × 23 times = ~8,740 tokens total
 ```
 
 > **See [instructions.md](instructions.md) for detailed pattern examples and optimization strategies.**
