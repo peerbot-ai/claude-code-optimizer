@@ -52,21 +52,6 @@ This will:
 Every conversation in Claude Code is saved as JSONL (JSON Lines) files in `~/.claude/projects/<hash>/`. The tool analyzes these sessions and generates a report:
 
 ```
-# Conversation History Analysis
-
-## Summary
-- Total Conversations: 3
-- Total Tool Calls: 13
-- Model: claude-sonnet-4-5-20250929
-- Input Tokens: 11687
-- Output Tokens: 5576
-
-## Tool Usage Distribution
-- Read: 2 calls
-- Edit: 2 calls
-- Bash: 2 calls
-- Task: 1 calls
-
 ## Sessions
 
 ### Session agent-567356cb [2025-11-04 03:15:59] (29s)
@@ -84,6 +69,8 @@ Every conversation in Claude Code is saved as JSONL (JSON Lines) files in `~/.cl
 2. Bash: [+4s cmd=97b out=1396b] node index.js --project-path=$(pwd) --print
 ⏹️ MessageEnd [+3s in=18t out=234t]
 ```
+
+Claude inspects the behavioral data from it's own agent and suggests different optimizations.
 
 ### Example Optimizations
 
