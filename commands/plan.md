@@ -9,12 +9,12 @@ Steps:
 
 2. If report exists:
    - Use AskUserQuestion to ask: "Found report from [timestamp]. What would you like to do?"
-   - Options: "Reuse existing report" | "Generate fresh report (includes latest conversations)"
+   - Options: "Reuse existing report" | "Generate fresh report (ask [NUMBER_OF_LAST_CONVERSATIONS])"
 
 3. Generate or retrieve report:
    - If "Reuse existing": Read the existing report file from step 1
    - If "Generate fresh" or no report exists:
-     - Run: `node ${CLAUDE_PLUGIN_ROOT}/index.js --project-path=$(pwd) --print`
+     - Run: `node ${CLAUDE_PLUGIN_ROOT}/index.js --project-path=$(pwd) --print --recent [NUMBER_OF_LAST_CONVERSATIONS]`
      - This command outputs the report to stdout AND saves to ~/.ato/projects/{project}/report-{timestamp}.md
      - Use the Bash tool output directly (it contains the full report markdown)
      - Note: By default, all conversations are analyzed. Use --recent=N to limit analysis for recent conversations.
