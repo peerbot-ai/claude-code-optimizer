@@ -1,4 +1,4 @@
-# Agent Token Optimizer
+# ato - save tokens on repeated workflows
 
 Analyzes your Claude Code conversation history, enriches tool call metadata, compresses conversation data with RLE, and uses Claude Code to detect repetitive multi-step patterns. It suggests:
 1. Helper scripts that trigger multiple tool calls in a single Bash command to save tokens on repeated workflows.

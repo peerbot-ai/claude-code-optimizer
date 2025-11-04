@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Agent Token Optimizer
+ * Agent Trace Optimizer
  * Analyzes Claude Code conversation history to identify token optimization opportunities
  * Works as: npx package, Claude Code plugin, or programmatic library
  */
@@ -810,7 +810,7 @@ if (require.main === module) {
   // Show help
   if (args.includes('--help') || args.includes('-h')) {
     console.log(`
-Agent Token Optimizer - Analyze Claude Code conversation history
+Agent Trace Optimizer - Analyze Claude Code conversation history
 
 Usage:
   agent-trace-ops [options]
