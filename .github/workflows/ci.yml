@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Test CLI executable
-        run: node bin/cli.js --help
+        run: node index.js --help
 
   lint:
     runs-on: ubuntu-latest

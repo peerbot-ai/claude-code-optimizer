@@ -28,7 +28,10 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "node index.js --format=cli"
+    "test": "node index.js --format=cli",
+    "lint": "node --check index.js conversation-worker.js",
+    "build": "echo 'No build step required'",
+    "format:check": "echo 'No formatter configured'"
   },
   "engines": {
     "node": ">=18.0.0"
