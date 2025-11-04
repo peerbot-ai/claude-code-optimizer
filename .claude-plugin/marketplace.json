@@ -1,0 +1,19 @@
+{
+  "name": "agent-trace-ops",
+  "owner": {
+    "name": "Peerbot AI",
+    "email": "hello@peerbot.ai"
+  },
+  "metadata": {
+    "description": "Token optimization plugin for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "agent-trace-ops",
+      "description": "Analyzes conversation history and suggests token-saving helpers. Use /optimize-tokens for on-demand analysis. Automatically detects repetitive patterns and calculates savings.",
+      "source": "./",
+      "strict": false
+    }
+  ]
+}

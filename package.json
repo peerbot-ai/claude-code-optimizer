@@ -1,0 +1,47 @@
+{
+  "name": "agent-trace-ops",
+  "version": "1.0.0",
+  "description": "Analyzes Claude Code conversation history to identify token optimization opportunities and generate helper scripts",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "claude-plugin",
+    "token-optimization",
+    "ai-assistant",
+    "automation",
+    "helper-scripts",
+    "cost-reduction"
+  ],
+  "main": "index.js",
+  "bin": {
+    "ato": "./index.js",
+    "agent-trace-ops": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "conversation-worker.js",
+    ".claude-plugin/",
+    "commands/",
+    "hooks/",
+    "hooks-handlers/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node index.js --format=cli"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peerbot-ai/agent-trace-ops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peerbot-ai/agent-trace-ops/issues"
+  },
+  "homepage": "https://github.com/peerbot-ai/agent-trace-ops#readme",
+  "author": "Peerbot AI <hello@peerbot.ai>",
+  "license": "MIT"
+}
