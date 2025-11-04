@@ -13,10 +13,10 @@ Analyzes your Claude Code conversation history, enriches tool call metadata, com
 /plugin install agent-trace-ops
 ```
 
-After installing the plugin, use the `/optimize` command for on-demand analysis:
+After installing the plugin, use the `/plan` command for on-demand analysis:
 
 ```bash
-/optimize
+/agent-trace-ops:plan
 ```
 
 ### CLI

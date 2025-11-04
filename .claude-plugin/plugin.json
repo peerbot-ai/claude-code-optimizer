@@ -1,7 +1,7 @@
 {
   "name": "agent-trace-ops",
   "version": "1.0.0",
-  "description": "Analyzes conversation history to identify token optimization opportunities. Use /optimize-tokens command for on-demand analysis with parallel agents.",
+  "description": "Analyzes conversation history to identify token optimization opportunities. Use /plan command for on-demand analysis with parallel agents.",
   "author": {
     "name": "Peerbot AI",
     "email": "hello@peerbot.ai"

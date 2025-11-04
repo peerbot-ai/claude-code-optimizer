@@ -42,17 +42,30 @@ class TokenOptimizer {
       return { input: 3, output: 15, name: 'Claude 3.5 Sonnet (assumed)' };
     }
 
-    // Claude Sonnet 4.5 pricing
-    if (model.includes('sonnet-4-5') || model.includes('sonnet-4.5')) {
+    const modelLower = model.toLowerCase();
+
+    // Claude Sonnet 4.5 pricing (verify current pricing)
+    if (modelLower.includes('sonnet-4-5') || modelLower.includes('sonnet-4.5') || modelLower.includes('sonnet-4')) {
       return { input: 3, output: 15, name: model };
     }
 
     // Claude 3.5 Sonnet pricing
-    if (model.includes('sonnet-3-5') || model.includes('sonnet-3.5') || model.includes('sonnet')) {
+    if (modelLower.includes('sonnet-3-5') || modelLower.includes('sonnet-3.5') || modelLower.includes('sonnet-3')) {
       return { input: 3, output: 15, name: model };
     }
 
+    // Claude 3 Opus pricing (higher tier)
+    if (modelLower.includes('opus')) {
+      return { input: 15, output: 75, name: model };
+    }
+
+    // Claude 3 Haiku pricing (lower tier)
+    if (modelLower.includes('haiku')) {
+      return { input: 0.25, output: 1.25, name: model };
+    }
+
     // Default to Sonnet pricing but keep actual model name
+    // This is a fallback - verify actual pricing for unknown models
     return { input: 3, output: 15, name: `${model} (assumed Sonnet pricing)` };
   }
 

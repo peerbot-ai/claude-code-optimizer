@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "agent-trace-ops",
-      "description": "Analyzes conversation history and suggests token-saving helpers. Use /optimize-tokens for on-demand analysis. Automatically detects repetitive patterns and calculates savings.",
+      "description": "Analyzes conversation history and suggests token-saving helpers. Use /optimize for on-demand analysis. Automatically detects repetitive patterns and calculates savings.",
       "source": "./",
       "strict": false
     }

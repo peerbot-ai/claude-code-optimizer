@@ -38,17 +38,37 @@ function formatDuration(start, end) {
 
 /**
  * Model pricing (per 1M tokens)
+ * Note: Pricing should be verified against current Anthropic pricing
+ * https://www.anthropic.com/pricing
  */
 function getModelPricing(model) {
-  if (!model) {
+  if (!model || model === 'unknown') {
     return { input: 3, output: 15 };
   }
-  if (model.includes('sonnet-4-5') || model.includes('sonnet-4.5')) {
+
+  const modelLower = model.toLowerCase();
+
+  // Claude Sonnet 4.5 pricing
+  if (modelLower.includes('sonnet-4-5') || modelLower.includes('sonnet-4.5') || modelLower.includes('sonnet-4')) {
     return { input: 3, output: 15 };
   }
-  if (model.includes('sonnet-3-5') || model.includes('sonnet-3.5') || model.includes('sonnet')) {
+
+  // Claude 3.5 Sonnet pricing
+  if (modelLower.includes('sonnet-3-5') || modelLower.includes('sonnet-3.5') || modelLower.includes('sonnet-3')) {
     return { input: 3, output: 15 };
   }
+
+  // Claude 3 Opus pricing (higher tier)
+  if (modelLower.includes('opus')) {
+    return { input: 15, output: 75 };
+  }
+
+  // Claude 3 Haiku pricing (lower tier)
+  if (modelLower.includes('haiku')) {
+    return { input: 0.25, output: 1.25 };
+  }
+
+  // Default to Sonnet pricing
   return { input: 3, output: 15 };
 }
 
