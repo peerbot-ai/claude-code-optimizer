@@ -1,6 +1,6 @@
 # Token optimization plugin for Claude Code
 
-Analyzes your Claude Code conversation history to detect repetitive multi-step patterns. The tool:
+Analyzes your Claude Code conversation history to detect repetitive multi-step patterns/tool calls. 
 1. Extracts and enriches tool call metadata with timing, token counts, and file ranges
 2. Compresses session data with RLE for efficient pattern detection
 3. Generates actionable optimization suggestions:
