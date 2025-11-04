@@ -8,7 +8,7 @@ agent-trace-ops (ato) analyzes your conversation’s tool-call chains and auto-s
    - **Parameterized Scripts**: Reusable workflows that handle different inputs
    - **File Refactorings**: Merge/split files accessed together to reduce token overhead
 
-![Demo](demo.mp4)
+![Demo](demo.gif)
 
 ## Usage
 
