@@ -112,25 +112,3 @@ make deploy-gateway  # Reduces 4 calls → 1 call
 ```
 
 > **See [instructions.md](instructions.md) for detailed pattern examples and optimization strategies.**
-
-## Development
-
-```bash
-# Clone the repository
-git clone https://github.com/peerbot-ai/agent-trace-ops.git
-cd agent-trace-ops
-
-# Run locally
-node index.js
-
-# Test hook mode
-node index.js --format=hook
-```
-
-## Publishing
-
-### To npm
-
-```bash
-npm publish
-```
