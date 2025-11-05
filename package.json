@@ -1,6 +1,6 @@
 {
   "name": "agent-trace-ops",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Analyzes Claude Code conversation history to identify token optimization opportunities and generate helper scripts",
   "keywords": [
     "claude",
