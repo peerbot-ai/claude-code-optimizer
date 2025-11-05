@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/peerbot-ai/agent-trace-ops/compare/v1.0.2...v1.0.3) (2025-11-05)
+
+
+### Bug Fixes
+
+* add id-token permission for npm provenance ([08063be](https://github.com/peerbot-ai/agent-trace-ops/commit/08063be9de48bc4635a1e47200d9559f30ae7071))
+
 ## [1.0.2](https://github.com/peerbot-ai/agent-trace-ops/compare/v1.0.1...v1.0.2) (2025-11-05)
 
 
